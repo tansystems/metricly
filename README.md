@@ -65,21 +65,13 @@ Use "Export to Excel" or "Export to PDF" buttons on the dashboard
 📁 Project Structure:
 
 backend/
-  
   main.go
-  
   models/
-  
   handlers/
-  
   middleware/
-  
   utils/
-  
   frontend/
-  
     src/components/
-    
     src/api/
 
 🔐 .env Example:
