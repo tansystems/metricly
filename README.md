@@ -1,81 +1,89 @@
-# Аналитический Dashboard
+📊 Metricly
 
-## Описание
+A lightweight analytics dashboard for visualizing business metrics from a database or external APIs.
 
-Веб-приложение для аналитики с визуализацией метрик из базы данных или внешних API. 
+🔧 Tech Stack
 
-**Стек:**
-- Backend: Go (Gin, GORM), PostgreSQL
-- Frontend: React, Recharts
-- Экспорт: Excel, PDF
+Backend: Go (Gin, GORM), PostgreSQL
 
-## Функционал
-- Логин (JWT)
-- Загрузка и отображение метрик (автоматически и вручную)
-- Визуализация: Bar, Line, Pie (Recharts)
-- Экспорт метрик в Excel и PDF
+Frontend: React, Recharts
 
----
+Export: Excel, PDF
 
-## Быстрый старт
+✨ Features
 
-### 1. Запуск PostgreSQL (docker)
-```bash
+JWT-based authentication
+
+Metric ingestion: manually or via REST API
+
+Data visualization (Bar, Line, Pie)
+
+Export charts to Excel or PDF
+
+Simple, extendable architecture
+
+🚀 Quick Start
+
+1. Launch PostgreSQL with Docker
+
 docker run --name analytics-db -e POSTGRES_PASSWORD=postgres -e POSTGRES_DB=analytics -p 5432:5432 -d postgres:15
-```
 
-### 2. Backend (Go)
-```bash
+2. Start Backend (Go)
+
 cd backend
+
 export POSTGRES_DSN="host=localhost user=postgres password=postgres dbname=analytics port=5432 sslmode=disable"
+
 export JWT_SECRET="your_secret_key"
+
 go run main.go
-```
 
-### 3. Frontend (React)
-```bash
+3. Start Frontend (React)
+
 cd backend/frontend
+
 npm install
+
 npm start
-```
 
----
+🖥️ Pages:
 
-## Страницы и сценарии
-- **/login** — форма входа
-- **/dashboard** — графики, экспорт, добавление метрик
+/login — secure login form
 
-### Добавление метрик
-- Вручную через форму на Dashboard
-- Автоматически через API (см. backend)
+/dashboard — main analytics dashboard with charts and metric controls
 
-### Экспорт
-- Кнопки "Экспорт в Excel" и "Экспорт в PDF" на Dashboard
+Adding Metrics:
 
----
+Manually: through the dashboard form
 
-## Пример .env для backend
-```
-POSTGRES_DSN=host=localhost user=postgres password=postgres dbname=analytics port=5432 sslmode=disable
-JWT_SECRET=your_secret_key
-```
+Automatically: via backend API (see docs or source)
 
----
+Exporting:
 
-## Структура проекта
-```
+Use "Export to Excel" or "Export to PDF" buttons on the dashboard
+
+📁 Project Structure:
+
 backend/
+  
   main.go
+  
   models/
+  
   handlers/
+  
   middleware/
+  
   utils/
+  
   frontend/
+  
     src/components/
+    
     src/api/
-```
 
----
+🔐 .env Example:
 
-## Контакты
-Автор: Max Spenser 
+POSTGRES_DSN=host=localhost user=postgres password=postgres dbname=analytics port=5432 sslmode=disable
+
+JWT_SECRET=your_secret_key
